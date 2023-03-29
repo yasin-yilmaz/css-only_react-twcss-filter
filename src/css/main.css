@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+	html {
+		@apply scroll-smooth;
+	}
+}
+
+@layer components {
+	.--page-container {
+		@apply flex min-h-screen items-center justify-center bg-slate-200 px-4;
+	}
+
+	.--main-container {
+		@apply flex flex-col gap-9 rounded-3xl bg-white py-12 px-8 sm:shadow-[-24px_-24px_0_0_#CCD5F9];
+	}
+
+	.--top-wrapper {
+		@apply flex flex-col gap-6;
+	}
+
+	.--btn {
+		@apply border border-slate-200  px-5 py-2 tracking-wide;
+	}
+
+	.--btn:first-child {
+		@apply rounded-l;
+	}
+
+	.--btn:last-child {
+		@apply rounded-r;
+	}
+
+	.--btn--active {
+		@apply bg-blue-500 text-white;
+	}
+
+	.--search {
+		@apply relative;
+	}
+
+	.--search input {
+		@apply w-full rounded border border-slate-200 bg-blue-50 p-4 pl-10 placeholder:text-base placeholder:text-slate-800/50;
+	}
+	.--search .--icon {
+		@apply absolute top-1/2 left-2 h-[24px] w-[24px] -translate-y-1/2 text-slate-800;
+	}
+
+	.--item {
+		@apply flex items-center gap-2 p-4 text-slate-800 hover:bg-blue-50;
+	}
+
+	.--item img {
+		@apply block h-[50px] w-[50px];
+	}
+}
